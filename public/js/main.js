@@ -1,4 +1,4 @@
-angular.module('contatooh', ['ngRoute'])
+angular.module('contatooh', ['ngRoute', 'ngResource'])
 
     //Após a versão 1.6 do Angular o # foi subistituido por #!, 
     //a configuração abaixo deixa a leitura da URL da mesma forma que a versão anterior.
