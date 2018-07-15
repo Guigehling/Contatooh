@@ -1,13 +1,6 @@
 angular.module('contatooh').controller('ContatosController',
     function ($scope, $resource) {
-        $scope.total = 0;
-
-        $scope.incrementa = function () {
-            $scope.total++;
-        }
-
         $scope.filtro = '';
-
         $scope.contatos = [];
 
         var Contato = $resource('/contatos/:id');
@@ -23,6 +16,14 @@ angular.module('contatooh').controller('ContatosController',
                 }
             );
         }
-
         buscaContatos();
+
+        $scope.remove = function (contato) {
+            Contato.delete({ id: contato._id }).$promise
+                .then(buscaContatos())
+                .catch(function (erro) {
+                    console.log('Não foi possível remover o contato.');
+                    console.log(erro);
+                });
+        };
     });
