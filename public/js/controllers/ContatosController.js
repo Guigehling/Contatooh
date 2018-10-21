@@ -2,6 +2,7 @@ angular.module('contatooh').controller('ContatosController',
     function ($scope, $resource) {
         $scope.filtro = '';
         $scope.contatos = [];
+        $scope.mensagem = { texto: '' };
 
         var Contato = $resource('/contatos/:id');
 
@@ -11,7 +12,7 @@ angular.module('contatooh').controller('ContatosController',
                     $scope.contatos = contatos;
                 },
                 function (erro) {
-                    console.log("Não foi possível obter a lista de contatos");
+                    $scope.mensagem = { texto: 'Não foi possível obter a lista' };
                     console.log(erro);
                 }
             );
@@ -22,7 +23,7 @@ angular.module('contatooh').controller('ContatosController',
             Contato.delete({ id: contato._id }).$promise
                 .then(buscaContatos())
                 .catch(function (erro) {
-                    console.log('Não foi possível remover o contato.');
+                    $scope.mensagem = { texto: 'Não foi possível remover o contato' };
                     console.log(erro);
                 });
         };
