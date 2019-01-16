@@ -6,13 +6,13 @@
 
 <p ng-show="mensagem.texto">{{mensagem.texto}}</p>
 
-<button class="btn btn-primary" ng-click="incrementa()">
-    Novo
-</button>
+<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
+<!-- <button class="btn btn-primary" ng-click="incrementa()"> Novo Contato</button> -->
+
 <input ng-model="filtro" type="search" placeholder="parte do nome">
 
 <p class="text-info" ng-show="contatos.length">Contatos cadastrados: {{contatos.length}}</p>
-<p class="text-info" ng-hide="contatos.length">Não há contatos cadasrtados</p>
+<p class="text-info" ng-hide="contatos.length">Não há contatos cadastrados</p>
 
 <div class="table-responsive">
     <table class="table table-hover">
