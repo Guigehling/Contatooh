@@ -7,7 +7,7 @@ var contatos = [
 
 module.exports = function () {
     var controller = {};
-    var ID_CONTATO_INCREMENTA = 3;
+    var ID_CONTATO_INCREMENTA = 4;
 
     controller.listaContatos = function (req, res) {
         res.json(contatos);
