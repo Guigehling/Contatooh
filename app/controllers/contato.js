@@ -48,7 +48,7 @@ module.exports = function () {
     };
 
     function adiciona(contatoNovo) {
-        contatoNovo = ++ID_CONTATO_INCREMENTA;
+        contatoNovo._id = ++ID_CONTATO_INCREMENTA;
         contatos.push(contatoNovo);
         return contatoNovo;
     };

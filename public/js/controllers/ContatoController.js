@@ -1,8 +1,8 @@
-angular.module('contatooh').controller('ContatoController',
-    function ($scope, $resource, $routeParams) {
-        // console.log($routeParams.contatoId);
+angular.module('contatooh')
+    .controller('ContatoController', function ($scope, Contato, $routeParams) {
 
-        var Contato = $resource('/contatos/:id');
+        // Não é mais necessario quando se usa o service Contato
+        // var Contato = $resource('/contatos/:id');
 
         if ($routeParams.contatoId) {
             Contato.get({ id: $routeParams.contatoId },
@@ -15,7 +15,6 @@ angular.module('contatooh').controller('ContatoController',
                 }
             );
         } else {
-            // $scope.contato = {};
             $scope.contato = new Contato();
         }
 
