@@ -1,10 +1,12 @@
-angular.module('contatooh').controller('ContatosController',
-    function ($scope, $resource) {
+angular.module('contatooh')
+    .controller('ContatosController', function ($scope, Contato) {
+
+        // Não é mais necessario quando se usa o service Contato
+        // var contatoResource = $resource('/contatos/:id');
+
         $scope.filtro = '';
         $scope.contatos = [];
         $scope.mensagem = { texto: '' };
-
-        var Contato = $resource('/contatos/:id');
 
         function buscaContatos() {
             Contato.query(
