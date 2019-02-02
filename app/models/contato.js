@@ -10,6 +10,10 @@ module.exports = function () {
             type: String,
             require: true,
             index: { unique: true }
+        },
+        emergencia: {
+            type: mongoose.Schema.ObjectId,
+            ref: 'Contato'
         }
     });
 
