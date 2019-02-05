@@ -30,4 +30,8 @@ angular.module('contatooh')
                 });
         };
 
+        Contato.query(function (contatos) {
+            $scope.contatos = contatos;
+        });
+
     })
