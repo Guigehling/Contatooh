@@ -18,6 +18,9 @@ module.exports = function () {
     app.use(bodyparser.json());
     app.use(require('method-override')());
 
+    //export dependencies
+    app.use('/node_modules', express.static('./node_modules'));
+
     // home(app) - rotas;    
     load('models', { cwd: 'app' })
         .then('controllers')

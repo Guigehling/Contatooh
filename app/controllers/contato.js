@@ -51,7 +51,7 @@ module.exports = function (app) {
         req.body.emergencia = req.body.emergencia || null;
 
         if (_id) {
-            Contato.findOneAndUpdate(_id, req.body).exec()
+            Contato.findByIdAndUpdate(_id, req.body).exec()
                 .then(
                     function (contato) {
                         res.json(contato);
