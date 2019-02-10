@@ -1,6 +1,6 @@
 module.exports = function (app) {
 
-    const Contato = app.models.contato;
+    const Contato = app.models.Contato;
 
     var controller = {};
 
