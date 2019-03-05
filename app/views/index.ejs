@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- build: css css/index.min.css -->
+    <!-- build:css css/index.min.css -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
     <!-- endbuild -->
 
-    <!-- build: js js;index.min.js -->
+    <!-- build:js js/index.min.js -->
     <script src="vendor/angular/angular.js"></script>
     <script src="vendor/angular-route/angular-route.js"></script>
     <script src="vendor/angular-resource/angular-resource.js"></script>
@@ -26,12 +26,12 @@
 
 <body class="container">
     <% if(usuarioLogado.length > 0){ %>
-        <div class="text-right">
-            <p>
-                Logado como: <span id="usuario-logado"> <%=usuarioLogado %> </span>
-                <a href="/logout">Logout</a>
-            </p>
-        </div>
+    <div class="text-right">
+        <p>
+            Logado como: <span id="usuario-logado"> <%=usuarioLogado %> </span>
+            <a href="/logout">Logout</a>
+        </p>
+    </div>
     <% } %>
     <div ng-view></div>
 </body>

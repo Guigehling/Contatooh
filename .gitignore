@@ -8,5 +8,7 @@ bower_components/
 node_modules/
 # Para todos os arquivos e sub-pastas localizados na pasta .vscode/
 .vscode/
-# Para todos os arquivos e sub-pastas localizados na pasta .dist/
+# Para todos os arquivos e sub-pastas localizados na pasta dist/
 dist/
+# Para todos os arquivos e sub-pastas localizados na pasta .tmp/
+.tmp/
