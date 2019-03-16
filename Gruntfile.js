@@ -33,18 +33,26 @@ module.exports = function (grunt) {
                 expand: true,
                 src: ['dist/public/js/**/*.js']
             }
-        }
+        },
+
+        terser: {
+            options: {},
+            files: {
+              'dist/public': ['dist/public/js/**/*.js']
+            },
+          }
 
     });
 
     grunt.registerTask('default', ['dist', 'minifica']);
     grunt.registerTask('dist', ['clean', 'copy']);
-    grunt.registerTask('minifica', ['useminPrepare', 'ngAnnotate', 'concat', 'uglify', 'cssmin', 'usemin']);
+    grunt.registerTask('minifica', ['useminPrepare', 'ngAnnotate', 'concat', 'terser', 'cssmin', 'usemin']);
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify-es');
+    // grunt.loadNpmTasks('grunt-contrib-uglify-es');
+    grunt.loadNpmTasks('grunt-terser');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-ng-annotate');
     grunt.loadNpmTasks('grunt-usemin');

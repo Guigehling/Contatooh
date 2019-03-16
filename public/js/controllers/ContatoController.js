@@ -3,6 +3,7 @@ angular.module('contatooh')
 
         // Não é mais necessario quando se usa o service Contato
         // var Contato = $resource('/contatos/:id');
+
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',

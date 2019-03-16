@@ -32,8 +32,10 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-ng-annotate": "^3.0.0",
-    "grunt-usemin": "^3.1.1"
+    "grunt-terser": "^0.1.0",
+    "grunt-usemin": "^3.1.1",
+    "karma": "^0.12.37",
+    "karma-firefox-launcher": "^1.1.0"
   }
 }
