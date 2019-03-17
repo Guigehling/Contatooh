@@ -22,7 +22,8 @@ module.exports = function(config) {
       '../public/js/main.js',
       '../public/js/controllers/**/*.js',
       '../public/js/services/**/*.js',
-      '../test/spec/**/*Spec.js'
+      '../test/spec/**/*Spec.js',
+      '../node_modules/sweetalert2/dist/sweetalert2.js'
     ],
 
 
